@@ -37,10 +37,11 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         
     }
 
-    func textFieldDidBeginEditing(textField: UITextField) {
-        
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        items.removeAtIndex(indexPath.row)
+        tableView.reloadData()
     }
-    
+        
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         items.append(textField.text)
@@ -49,6 +50,6 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         
         return true
     }
-    
+
 }
 
