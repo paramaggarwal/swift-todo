@@ -38,14 +38,24 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        items.removeAtIndex(indexPath.row)
-        tableView.reloadData()
-    }
         
+        items.removeAtIndex(indexPath.row)
+
+        let index = NSIndexPath(forRow: items.count, inSection: 0)
+        self.tableView.deleteRowsAtIndexPaths([index], withRowAnimation: .Left)
+
+//        tableView.reloadData()
+    }
+    
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
         items.append(textField.text)
-        self.tableView.reloadData()
+        
+        let index = NSIndexPath(forRow: items.count-1, inSection: 0)
+        self.tableView.insertRowsAtIndexPaths([index], withRowAnimation: .Right)
+
+//        self.tableView.reloadData()
+        
         textField.text = ""
         
         return true
