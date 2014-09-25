@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UITableViewController, UITextFieldDelegate {
 
+    var items = ["get milk", "do talk", "build something"]
+    
     @IBOutlet weak var newItemField: UITextField!
     
     override func viewDidLoad() {
@@ -23,13 +25,13 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return items.count
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("item", forIndexPath: indexPath) as UITableViewCell
         
-        cell.textLabel?.text = String(indexPath.row)
+        cell.textLabel?.text = items[indexPath.row]
         
         return cell;
         
