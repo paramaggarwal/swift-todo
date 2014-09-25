@@ -8,8 +8,10 @@
 
 import UIKit
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var newItemField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,5 +34,16 @@ class ViewController: UITableViewController {
         return cell;
         
     }
+
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        
+        return true
+    }
+    
 }
 

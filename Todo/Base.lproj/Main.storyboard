@@ -20,6 +20,9 @@
                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="hGm-Zj-WwK" id="cyK-Xb-G6q"/>
+                                    </connections>
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -46,6 +49,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="cOf-TA-tz8"/>
+                    <connections>
+                        <outlet property="newItemField" destination="yaX-oD-sJc" id="pOv-w6-soJ"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHt-1r-9RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
