@@ -45,6 +45,7 @@ class ViewController: UITableViewController, UITextFieldDelegate {
         
         items.append(textField.text)
         self.tableView.reloadData()
+        textField.text = ""
         
         return true
     }
