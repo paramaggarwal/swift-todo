@@ -16,7 +16,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaX-oD-sJc">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new item" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yaX-oD-sJc">
                                     <rect key="frame" x="8" y="7" width="584" height="30"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits"/>
@@ -26,6 +26,12 @@
                                 </textField>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="yaX-oD-sJc" secondAttribute="centerX" id="0Jd-U8-r6W"/>
+                                <constraint firstAttribute="trailing" secondItem="yaX-oD-sJc" secondAttribute="trailing" constant="8" id="4Pj-yj-LZk"/>
+                                <constraint firstItem="yaX-oD-sJc" firstAttribute="leading" secondItem="D2G-xf-ohh" secondAttribute="leading" constant="8" id="Jff-1G-E2a"/>
+                                <constraint firstAttribute="centerY" secondItem="yaX-oD-sJc" secondAttribute="centerY" id="N3y-UF-sFK"/>
+                            </constraints>
                         </view>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" restorationIdentifier="item" selectionStyle="default" indentationWidth="10" reuseIdentifier="item" textLabel="pc2-dp-HkS" style="IBUITableViewCellStyleDefault" id="nL9-Tv-5jd">
