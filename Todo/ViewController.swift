@@ -43,6 +43,8 @@ class ViewController: UITableViewController, UITextFieldDelegate {
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         
+        items.append(textField.text)
+        self.tableView.reloadData()
         
         return true
     }
